@@ -1,0 +1,42 @@
+.main {
+  align-items: stretch;
+  display: flex;
+  height: 100vh;
+}
+
+.main aside {
+  display: flex;
+  flex: 10;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 80px;
+}
+
+.main aside strong {
+  font: 700 36px;
+  line-height: 42px;
+  margin-top: 16px;
+}
+
+.main main {
+  align-items: center;
+  display: flex;
+  flex: 18;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.chatbox {
+  border: solid 1px #c6c6c6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 200px;
+  overflow: scroll;
+  width: 500px;
+}
+
+.name {
+  border: solid 1px #c6c6c6;
+  width: 100%;
+}

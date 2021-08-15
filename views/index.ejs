@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>MVC Test</title>
+  </head>
+  <body>
+    <div id="page-auth" class="main">
+      <aside>
+        <h2>Usuarios conectados</h2>
+        <ul id="users"></ul>
+      </aside>
+      <main>
+        <div className="main-content">
+          <div id="chatbox" class="chatbox">
+            <% chatData.forEach((post) => { %>
+            <span data-testid="message"
+              ><%= post.timestamps %> - <%= post.nickname %>: <%= post.message
+              %></span
+            >
+            <% }) %>
+          </div>
+          <form action="">
+            <input type="text" name="" id="message" data-testid="message-box" />
+            <Button id="send-btn" data-testid="send-button">Send</Button>
+          </form>
+          <input
+            type="text"
+            name=""
+            id="name"
+            class="name"
+            placeholder="introduce your nickname"
+            data-testid="nickname-box"
+          />
+          <Button id="send-nick" data-testid="nickname-button"
+            >Set new nick</Button
+          >
+        </div>
+      </main>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
